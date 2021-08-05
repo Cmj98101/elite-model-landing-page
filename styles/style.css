@@ -1,0 +1,280 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+    letter-spacing: 1.2px;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+img {
+    position: relative;
+    width: 100%;
+    min-width: 250px;
+
+}
+
+p {
+    font-size: 1.2rem;
+    color: white;
+    font-weight: lighter;
+
+}
+
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-color: #EC5A3B;
+
+}
+
+header {
+    width: 100vw;
+    height: 300px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(48, 58, 74, .6),
+            rgba(48, 58, 74, .6)), url("../assets/Paper\ patterns.jpeg") no-repeat;
+    background-size: cover;
+    background-position: center;
+
+
+}
+
+header img {
+    position: absolute;
+    display: block;
+    top: 20px;
+    left: 20px;
+    width: 170px;
+
+
+}
+
+header h1,
+header h1 span {
+    display: block;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+
+header h1 {
+    align-self: center;
+    justify-self: center;
+    text-align: center;
+    color: white;
+}
+
+header h1 span {
+    color: #EC5A3B;
+}
+
+main {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrap {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.display-card {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2F3848;
+    border-radius: 8px;
+}
+
+.display-card img {
+    margin-bottom: 15px;
+    border-radius: 5px;
+}
+
+.display-card h3 {
+    margin-bottom: 15px;
+    color: #EC5A3B;
+    letter-spacing: 2.5px;
+}
+
+.display-card p {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.display-card p span {
+    font-weight: bold;
+    color: #EC5A3B;
+}
+
+
+
+.display-card,
+#about-us,
+#contact-us {
+    width: 95%;
+    padding: 10px;
+    border-radius: 8px;
+
+}
+
+main #about-us-heading {
+    margin-top: 30px;
+    margin-bottom: 20px;
+
+    color: #0F2031;
+    font-weight: lighter;
+
+}
+
+#about-us {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2F3848;
+
+}
+
+#about-us img {
+    margin-bottom: 20px;
+
+    border-radius: 5px;
+
+}
+
+#about-us p {
+    margin-bottom: 15px;
+    text-align: center;
+
+}
+
+#contact-us {
+    margin: 40px 0px;
+    background-color: #2F3848;
+
+
+}
+
+#contact-us h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #EC5A3B;
+    font-weight: lighter;
+
+
+}
+
+#contact-us form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+}
+
+#contact-us label {
+    color: white;
+    font-size: 1.2rem;
+}
+
+input {
+    height: 55px;
+    padding: 10px;
+    font-size: 1.6rem;
+
+}
+
+textarea {
+    padding: 10px;
+    font-size: 1.6rem;
+
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-weight: lighter;
+}
+
+button {
+    width: 50%;
+    height: 55px;
+    margin: 20px 0px;
+    align-self: center;
+    background-color: #EC5A3B;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+@media screen and (min-width: 835px) {
+    header {
+        margin: 0px;
+    }
+
+    header img {
+        width: 25%;
+    }
+
+    header h1,
+    header h1 span {
+        font-size: 2.3rem;
+    }
+
+    .wrap {
+        position: relative;
+        top: -50px;
+        flex-direction: row;
+        margin: 0px 5%;
+    }
+
+
+    .first,
+    .third {
+        position: relative;
+        top: 65px;
+    }
+
+    main #about-us-heading {
+        margin-top: 60px;
+
+    }
+
+    #about-us {
+        flex-direction: row;
+        padding: 0px;
+
+    }
+
+    #about-us img {
+        flex: 5;
+    }
+
+    #about-us p,
+    #about-us img {
+        margin: 0px;
+    }
+
+    #about-us p {
+        flex: 3;
+        padding: 100px;
+    }
+
+    #contact-us {
+        width: 70%;
+        padding: 10px 10%;
+
+    }
+}
