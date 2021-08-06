@@ -61,7 +61,7 @@ header img {
 header h1,
 header h1 span {
     display: block;
-    font-size: 25px;
+    font-size: 1.7rem;
     font-weight: bold;
 
 }
@@ -93,7 +93,7 @@ main {
 
 .display-card {
     margin-bottom: 10px;
-    display: flex;
+    display: inline-flex;
     flex-direction: column;
     align-items: center;
     background-color: #2F3848;
@@ -113,6 +113,7 @@ main {
 
 .display-card p {
     margin-bottom: 15px;
+    padding: 10px;
     text-align: center;
 }
 
@@ -121,11 +122,19 @@ main {
     color: #EC5A3B;
 }
 
-
+.display-card:hover {
+    box-shadow: 0px 2px 5px #2F3848;
+    /* width: 115%;
+    -webkit-transition: all 1.5s 0s ease;
+    -moz-transition: all 1.5s 0s ease;
+    -o-transition: all 1.5s 0s ease;
+    transition: all 1.5s 0s ease; */
+}
 
 .display-card,
 #about-us,
-#contact-us {
+#contact-us,
+#industries {
     width: 95%;
     padding: 10px;
     border-radius: 8px;
@@ -135,7 +144,6 @@ main {
 main #about-us-heading {
     margin-top: 30px;
     margin-bottom: 20px;
-
     color: #0F2031;
     font-weight: lighter;
 
@@ -157,9 +165,65 @@ main #about-us-heading {
 }
 
 #about-us p {
+    margin-top: 15px;
+
     margin-bottom: 15px;
+    padding: 10px;
     text-align: center;
 
+}
+
+#industries {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #2F3848;
+}
+
+#industries h2 {
+    margin: 15px 0px;
+    color: #EC5A3B;
+    letter-spacing: 2.5px;
+    font-weight: lighter;
+}
+
+#industries p {
+    text-align: center;
+}
+
+#industries ul {
+    margin-top: 20px;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+
+    gap: 10px;
+}
+
+#industries ul li {
+    height: 55px;
+    max-width: 75%;
+    width: 100px;
+    padding: 10px 10px;
+    border-radius: 8px;
+    background-color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 1.1rem;
+
+
+    color: #EC5A3B;
+    list-style-type: none;
+}
+
+#success-message {
+    font-size: 1.3rem;
+    text-align: center;
+    color: rgb(32, 170, 32);
 }
 
 #contact-us {
@@ -253,7 +317,7 @@ button {
     }
 
     #about-us {
-        flex-direction: row;
+        flex-direction: column;
         padding: 0px;
 
     }
@@ -272,9 +336,8 @@ button {
         padding: 100px;
     }
 
-    #contact-us {
-        width: 70%;
-        padding: 10px 10%;
+    #industries ul {
 
+        direction: column;
     }
 }
