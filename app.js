@@ -56,7 +56,7 @@ app.post('/send', (req, res) => {
     // send mail with defined transport object sean@velocityplotter.com, janier@velocityplotters.com
     transporter.sendMail({
         from: '"Submission Form" <chris@velocityplotters.com>', // sender address
-        to: "chris@velocityplotters.com", // list of receivers
+        to: "chris@velocityplotters.com, sean@velocityplotters.com", // list of receivers
         subject: "Landing Page Submission Form", // Subject line
         text: "Hello world?", // plain text body
         html: output, // html body
@@ -73,4 +73,4 @@ app.post('/send', (req, res) => {
 
 
 });
-app.listen(3000, () => console.log('Server Started...'));
+app.listen(process.env.PORT || 3000, () => console.log('Server Started...'));
