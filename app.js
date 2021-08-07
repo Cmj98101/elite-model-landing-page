@@ -1,10 +1,12 @@
 "use strict";
+const dotenv = require('dotenv');
 const express = require('express');
 const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require("nodemailer");
 
+dotenv.config();
 
 
 const app = express();
@@ -46,7 +48,7 @@ app.post('/send', (req, res) => {
         secure: true, // true for 465, false for other ports
         auth: {
             user: 'apikey', // generated ethereal user
-            pass: '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', // generated ethereal password
+            pass: `${process.env.API_KEY}`, // generated ethereal password
         },
         tls: {
             rejectUnauthorized: false
@@ -56,7 +58,7 @@ app.post('/send', (req, res) => {
     // send mail with defined transport object sean@velocityplotter.com, janier@velocityplotters.com
     transporter.sendMail({
         from: '"Submission Form" <chris@velocityplotters.com>', // sender address
-        to: "chris@velocityplotters.com, sean@velocityplotters.com", // list of receivers
+        to: "chris@velocityplotters.com", // list of receivers
         subject: "Landing Page Submission Form", // Subject line
         text: "Hello world?", // plain text body
         html: output, // html body
