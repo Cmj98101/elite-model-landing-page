@@ -56,7 +56,7 @@ app.post('/send', (req, res) => {
     });
 
     // send mail with defined transport object sean@velocityplotter.com, janier@velocityplotters.com
-    transporter.sendMail({
+    let info = transporter.sendMail({
         from: '"Submission Form" <chris@velocityplotters.com>', // sender address
         to: "chris@velocityplotters.com", // list of receivers
         subject: "Landing Page Submission Form", // Subject line
