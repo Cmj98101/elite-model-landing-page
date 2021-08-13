@@ -311,6 +311,15 @@ button {
         top: 65px;
     }
 
+    .wrap,
+    #about-us,
+    #contact-us,
+    #industries {
+        width: 70%;
+        border-radius: 8px;
+
+    }
+
     main #about-us-heading {
         margin-top: 60px;
 

@@ -10,6 +10,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz:wght@300;400;700&display=swap"
         rel="stylesheet">
+    {{!--
+    <link href="/favicon.ico" type="image/x-icon" rel="icon" /> --}}
+
     <title>Velocity Plotters | ELITE MODEL</title>
 </head>
 
@@ -58,7 +61,7 @@
             <ul>
                 <li>Apparel Industry</li>
                 <li>Automotive Industry</li>
-                <li>Upholstery Industry</li>
+                <li>Upholstery</li>
                 <li>Sewn Industry</li>
                 <li>Marine Industry</li>
                 <li>Aerospace Industry</li>
@@ -73,14 +76,15 @@
             <h2>Contact Us</h2>
             <p id="success-message" style="display: none;">Email has been sent!</p>
             <form action="send" method="POST">
-                <label for="name">Name:</label> <input type="text" name="name" id="name" placeholder="John Doe">
+                <label for="name">Name*:</label> <input type="text" name="name" id="name" placeholder="John Doe"
+                    required>
                 <br>
                 <label for="email">Email:</label> <input type="email" name="email" id="email"
-                    placeholder="email@email.com"><br>
+                    placeholder="email@email.com" required><br>
                 <label for="contact-number">Contact Number:</label> <input type="tel" name="contactNumber"
                     id="contact-number" placeholder="(111) 123-4567"> <br>
-                <label for="questions">Questions?</label><textarea name="questions" id="questions" cols="30" rows="5"
-                    placeholder="Any Questions feel free to let us Know!"></textarea>
+                <label for="questions">Questions</label><textarea name="questions" id="questions" cols="30" rows="5"
+                    placeholder="Any Questions feel free to let us Know!" required></textarea>
                 <button type="submit" id="submit">Send</button>
             </form>
         </section>
