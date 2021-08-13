@@ -51,7 +51,7 @@ async function main() {
             secure: true, // true for 465, false for other ports
             auth: {
                 user: 'apikey', // generated ethereal user
-                pass: `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`, // generated ethereal password
+                pass: `${process.env.API_KEY}`, // generated ethereal password
             },
             tls: {
                 rejectUnauthorized: false
