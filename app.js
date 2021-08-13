@@ -75,8 +75,7 @@ app.post('/send', (req, res) => {
 
 
 });
-const port = process.env.PORT || 3000;
-const server = app.listen(port, () => {
+app.listen(process.env.PORT || 3000, () => {
     const port = server.address().port;
     console.log(`Express is working on port ${port}`);
 });
